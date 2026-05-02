@@ -1,15 +1,12 @@
 import { createVerifier } from "codeverify";
-import eslint from "@codeverify/eslint";
-import zls from "@codeverify/zls";
-import pyright from "@codeverify/pyright";
-import rust from "@codeverify/rust";
+import autoload from "@codeverify/autoload";
 
 const verifier = createVerifier();
 
-verifier.use(eslint);
-verifier.use(zls);
-verifier.use(pyright);
-verifier.use(rust);
+const loaded = await autoload.loadAll(verifier, import.meta);
+console.log(
+    `Loaded ${loaded} adapter(s) from installed @codeverify/* packages\n`,
+);
 
 // --- Test Zig ---
 const zigResult = await verifier.verify("./test_files/zig/test.zig");

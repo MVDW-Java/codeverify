@@ -1,0 +1,15 @@
+{
+    "name": "@codeverify/autoload",
+    "version": "1.0.0",
+    "description": "Auto-discovers and loads all available @codeverify/* adapter packages without hard dependencies",
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "peerDependencies": {
+        "codeverify": ">=0.1.0"
+    }
+}
