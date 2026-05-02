@@ -12,7 +12,8 @@
     "dependencies": {
         "codeverify": "file:../packages/core",
         "@codeverify/eslint": "file:../packages/lsp-eslint",
-        "@codeverify/zls": "file:../packages/lsp-zls"
-
+        "@codeverify/zls": "file:../packages/lsp-zls",
+        "@codeverify/pyright": "file:../packages/lsp-pyright",
+        "@codeverify/rust": "file:../packages/lsp-rust"
     }
 }
